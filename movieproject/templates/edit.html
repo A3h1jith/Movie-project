@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <form method="post" enctype="multipart/form-data" style="text-align:left;">
+        {% csrf_token %}
+            <div class="col-md-8 d-inline-block align-stretch " style="color:blue;">
+                {{ form.as_p }}
+                <input type="submit" class="btn btn-success" value="Update"><br><br>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}
